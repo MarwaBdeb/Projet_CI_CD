@@ -31,7 +31,7 @@ def test_login(driver):
     url = os.environ.get("APP_URL", "http://34.123.38.242")
     username = os.environ.get("APP_USERNAME", "user1")
     password = os.environ.get("APP_PASSWORD", "Hdjsy@1hrts")
-    
+    driver.get(url + "/login")
     driver.find_element(By.ID, "username").send_keys(username)
     driver.find_element(By.ID, "password").send_keys(password)
     driver.find_element(By.ID, "login-submit").click()
